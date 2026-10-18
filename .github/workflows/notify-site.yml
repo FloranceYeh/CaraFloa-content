@@ -13,16 +13,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Trigger Netlify build hook
+      - name: Trigger deployment hook
         env:
           NETLIFY_BUILD_HOOK_URL: ${{ secrets.NETLIFY_BUILD_HOOK_URL }}
+          VERCEL_DEPLOY_HOOK_URL: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
         run: |
-          if [ -z "$NETLIFY_BUILD_HOOK_URL" ]; then
-            echo "NETLIFY_BUILD_HOOK_URL is not configured."
-            exit 1
+          if [ -n "$NETLIFY_BUILD_HOOK_URL" ]; then
+            curl --fail-with-body --silent --show-error \
+              --request POST \
+              --data '{}' \
+              "$NETLIFY_BUILD_HOOK_URL"
+            exit 0
           fi
 
-          curl --fail-with-body --silent --show-error \
-            --request POST \
-            --data '{}' \
-            "$NETLIFY_BUILD_HOOK_URL"
+          if [ -n "$VERCEL_DEPLOY_HOOK_URL" ]; then
+            curl --fail-with-body --silent --show-error \
+              --request POST \
+              "$VERCEL_DEPLOY_HOOK_URL"
+            exit 0
+          fi
+
+          echo "Configure NETLIFY_BUILD_HOOK_URL or VERCEL_DEPLOY_HOOK_URL."
+          exit 1

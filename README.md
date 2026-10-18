@@ -76,6 +76,16 @@ CONTENT_REF=main
 
 Build Hook URL 只应保存在 GitHub Actions Secret 中，不要写入公开文件。
 
+如果站点使用 Vercel，在 Vercel 项目的 **Settings → Git → Deploy Hooks** 中创建
+Deploy Hook，然后在本仓库配置：
+
+```text
+VERCEL_DEPLOY_HOOK_URL=<Vercel Deploy Hook URL>
+```
+
+内容仓库的 Action 会自动识别已配置的 Netlify 或 Vercel URL，并触发对应平台构建。
+至少配置其中一个，不要把 URL 直接写入仓库文件。
+
 ## License
 
 内容仓库中的文章、配置和图片资源沿用站点项目的
