@@ -5,7 +5,7 @@ period: "p1"
 title: "folia-major：将动态歌词与动效设计推向极致的多源音乐播放器"
 summary: "解析开源播放器 folia-major 如何凭借逐字歌词渲染、粒子点云与多源音频架构，打造极致视觉体验。"
 publishedAt: "2026-10-19T09:00:00+08:00"
-tags: ["开源速递", "TypeScript", "Electron", "音频播放器", "动效设计"]
+tags: ["TypeScript", "Electron", "音频播放器", "动效设计"]
 ---
 
 在本地与流媒体音乐播放器领域，绝大多数工具在歌词展示上依然停留在传统的逐行滚动甚至静态文本阶段。而开源项目 **folia-major**（GitHub: `chthollyphile/folia-major`）另辟蹊径，将视觉重点放在了极具冲击力的**歌词动画与音频可视化动效**上。
