@@ -4,12 +4,8 @@ section: special
 period: p0
 title: CaraFloa 开发至今：在周期与网格之间搭建一个内容站点
 summary: 记录 CaraFloa 从开始开发至今的技术选择、内容协作方式、站点特性，以及对未来发展的期待。
-tags:
-  - CaraFloa
-  - Astro
-  - 开发记录
-  - 站点建设
 publishedAt: 2026-10-18T09:00:00+08:00
+tags: ["CaraFloa", "Astro", "开发记录", "站点建设"]
 ---
 
 # CaraFloa 正式上线！

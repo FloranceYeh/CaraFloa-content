@@ -4,7 +4,7 @@ section: "special"
 id: "carafloa-week-one"
 period: "p1"
 summary: "复盘 CaraFloa 上线首周的 45 次提交：从框架骨架、视觉与信息架构，到内容与代码解耦、评论系统接入，以及一个数据惨淡但承诺未变的第一周。"
-publishedAt: "2026-10-24T09:00:00+08:00"
+publishedAt: 2026-10-25T09:00:00+08:00
 tags: ["Astro", "Waline", "站点建设"]
 ---
 
